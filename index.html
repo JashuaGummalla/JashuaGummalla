@@ -1,0 +1,2383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jashua Gummalla | CSE Student & Developer</title>
+
+    <meta
+        name="description"
+        content="Jashua Gummalla — Computer Science Engineering student building practical software with Python, Django, React, JavaScript and AI."
+    >
+
+    <meta name="author" content="Jashua Gummalla">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jashua Gummalla | CSE Student & Developer">
+    <meta
+        property="og:description"
+        content="Computer Science Engineering student building practical software with Python, Django, React, JavaScript and AI."
+    >
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EJG%3C/text%3E%3C/svg%3E"
+    >
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Professional Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        :root {
+            --bg: #08111f;
+            --bg-soft: #0d1727;
+            --surface: #111c2d;
+            --surface-2: #152238;
+
+            --text: #f8fafc;
+            --text-soft: #cbd5e1;
+            --muted: #94a3b8;
+
+            --accent: #14b8a6;
+            --accent-light: #2dd4bf;
+
+            --border: rgba(148, 163, 184, 0.15);
+
+            --shadow:
+                0 20px 50px rgba(0, 0, 0, 0.25);
+
+            --radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family:
+                "Inter",
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: var(--bg);
+            color: var(--text);
+
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #06111d;
+        }
+
+        .container {
+            max-width: 1140px;
+        }
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+            background: rgba(8, 17, 31, 0.88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid var(--border);
+
+            transition: 0.3s ease;
+        }
+
+        .navbar-brand {
+            color: var(--text) !important;
+
+            font-size: 1.25rem;
+            font-weight: 800;
+
+            letter-spacing: -0.03em;
+        }
+
+        .brand-dot {
+            color: var(--accent);
+        }
+
+        .nav-link {
+            color: var(--muted) !important;
+
+            font-size: 0.9rem;
+            font-weight: 500;
+
+            padding: 0.6rem 0.9rem !important;
+
+            transition: 0.25s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text) !important;
+        }
+
+        .navbar-toggler {
+            border: 1px solid var(--border);
+            padding: 0.45rem 0.65rem;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .btn-main {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 0.5rem;
+
+            padding: 0.8rem 1.25rem;
+
+            border-radius: 10px;
+
+            background: var(--accent);
+            color: #06111d;
+
+            font-size: 0.9rem;
+            font-weight: 700;
+
+            border: 1px solid var(--accent);
+
+            transition: 0.25s ease;
+        }
+
+        .btn-main:hover {
+            background: var(--accent-light);
+            color: #06111d;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px rgba(20, 184, 166, 0.18);
+        }
+
+        .btn-outline-main {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 0.5rem;
+
+            padding: 0.8rem 1.25rem;
+
+            border-radius: 10px;
+
+            color: var(--text);
+            background: transparent;
+
+            border: 1px solid var(--border);
+
+            font-size: 0.9rem;
+            font-weight: 600;
+
+            transition: 0.25s ease;
+        }
+
+        .btn-outline-main:hover {
+            color: var(--text);
+
+            border-color: rgba(20, 184, 166, 0.5);
+
+            background: rgba(20, 184, 166, 0.06);
+
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            padding-top: 100px;
+            padding-bottom: 80px;
+
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            top: 5%;
+            right: -180px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(20, 184, 166, 0.12),
+                    transparent 70%
+                );
+
+            pointer-events: none;
+        }
+
+        .hero-label {
+            display: inline-flex;
+
+            align-items: center;
+            gap: 0.55rem;
+
+            color: var(--accent-light);
+
+            font-family: "JetBrains Mono", monospace;
+
+            font-size: 0.78rem;
+            font-weight: 500;
+
+            margin-bottom: 1.4rem;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+
+            background: var(--accent);
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 0 5px rgba(20, 184, 166, 0.08);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 7vw, 5.2rem);
+
+            line-height: 1.02;
+
+            letter-spacing: -0.055em;
+
+            font-weight: 800;
+
+            max-width: 800px;
+
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-description {
+            max-width: 680px;
+
+            color: var(--text-soft);
+
+            font-size: 1.08rem;
+
+            margin-bottom: 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 0.8rem;
+
+            margin-bottom: 2.2rem;
+        }
+
+        .hero-socials {
+            display: flex;
+
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--muted);
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            transition: 0.25s ease;
+        }
+
+        .social-link:hover {
+            color: var(--accent-light);
+
+            border-color: rgba(20, 184, 166, 0.4);
+
+            transform: translateY(-3px);
+        }
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-label {
+            color: var(--accent);
+
+            font-family: "JetBrains Mono", monospace;
+
+            font-size: 0.75rem;
+            font-weight: 500;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+
+            margin-bottom: 0.6rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+
+            font-weight: 800;
+
+            letter-spacing: -0.04em;
+
+            margin-bottom: 0.8rem;
+        }
+
+        .section-description {
+            max-width: 650px;
+
+            color: var(--muted);
+
+            margin: 0;
+        }
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-text {
+            color: var(--text-soft);
+
+            font-size: 1rem;
+
+            margin-bottom: 1.1rem;
+        }
+
+        .about-card {
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 1.7rem;
+
+            height: 100%;
+
+            transition: 0.3s ease;
+        }
+
+        .about-card:hover {
+            border-color:
+                rgba(20, 184, 166, 0.28);
+
+            transform: translateY(-4px);
+        }
+
+        .about-card h4 {
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            margin-bottom: 1rem;
+        }
+
+        .education-item {
+            padding-bottom: 1rem;
+
+            margin-bottom: 1rem;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .education-item:last-child {
+            border-bottom: 0;
+
+            margin-bottom: 0;
+
+            padding-bottom: 0;
+        }
+
+        .education-title {
+            font-weight: 600;
+
+            color: var(--text);
+        }
+
+        .education-meta {
+            color: var(--muted);
+
+            font-size: 0.85rem;
+        }
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
+
+        .skill-group {
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 1.5rem;
+
+            height: 100%;
+        }
+
+        .skill-group h3 {
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 0.55rem;
+        }
+
+        .skill-tag {
+            display: inline-flex;
+
+            align-items: center;
+
+            padding: 0.4rem 0.7rem;
+
+            border-radius: 7px;
+
+            background: rgba(148, 163, 184, 0.07);
+
+            border: 1px solid var(--border);
+
+            color: var(--text-soft);
+
+            font-size: 0.78rem;
+
+            transition: 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            color: var(--accent-light);
+
+            border-color:
+                rgba(20, 184, 166, 0.3);
+        }
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .project-card {
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 1.5rem;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+
+            border-color:
+                rgba(20, 184, 166, 0.32);
+
+            box-shadow: var(--shadow);
+        }
+
+        .project-top {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 1.3rem;
+        }
+
+        .project-icon {
+            width: 44px;
+            height: 44px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 11px;
+
+            color: var(--accent-light);
+
+            background:
+                rgba(20, 184, 166, 0.08);
+
+            border:
+                1px solid rgba(20, 184, 166, 0.12);
+        }
+
+        .project-links {
+            display: flex;
+
+            gap: 0.55rem;
+        }
+
+        .project-link {
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 8px;
+
+            color: var(--muted);
+
+            border: 1px solid var(--border);
+
+            transition: 0.2s ease;
+        }
+
+        .project-link:hover {
+            color: var(--accent-light);
+
+            border-color:
+                rgba(20, 184, 166, 0.35);
+        }
+
+        .project-card h3 {
+            font-size: 1.12rem;
+
+            font-weight: 700;
+
+            margin-bottom: 0.7rem;
+        }
+
+        .project-card p {
+            color: var(--muted);
+
+            font-size: 0.9rem;
+
+            margin-bottom: 1.2rem;
+        }
+
+        .project-tech {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 0.4rem;
+
+            margin-top: auto;
+
+            margin-bottom: 1.25rem;
+        }
+
+        .tech {
+            font-family: "JetBrains Mono", monospace;
+
+            font-size: 0.68rem;
+
+            color: var(--text-soft);
+
+            background:
+                rgba(148, 163, 184, 0.06);
+
+            border: 1px solid var(--border);
+
+            padding: 0.3rem 0.5rem;
+
+            border-radius: 5px;
+        }
+
+        .project-demo {
+            color: var(--accent-light);
+
+            font-size: 0.82rem;
+
+            font-weight: 600;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 0.4rem;
+
+            transition: 0.2s ease;
+        }
+
+        .project-demo:hover {
+            color: var(--text);
+        }
+
+        /* =====================================================
+           CERTIFICATIONS
+        ===================================================== */
+
+        .cert-card {
+            height: 100%;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 1.4rem;
+
+            display: flex;
+
+            gap: 1rem;
+
+            transition: 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(20, 184, 166, 0.3);
+        }
+
+        .cert-icon {
+            flex: 0 0 auto;
+
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            color: var(--accent-light);
+
+            background:
+                rgba(20, 184, 166, 0.08);
+        }
+
+        .cert-content h3 {
+            font-size: 0.95rem;
+
+            line-height: 1.4;
+
+            font-weight: 700;
+
+            margin-bottom: 0.3rem;
+        }
+
+        .cert-content p {
+            color: var(--muted);
+
+            font-size: 0.78rem;
+
+            margin: 0;
+        }
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--surface),
+                    var(--bg-soft)
+                );
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            padding: 3rem;
+
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+
+            font-weight: 800;
+
+            letter-spacing: -0.04em;
+
+            margin-bottom: 1rem;
+        }
+
+        .contact-box p {
+            max-width: 600px;
+
+            margin: 0 auto 1.6rem;
+
+            color: var(--muted);
+        }
+
+        .contact-email {
+            color: var(--accent-light);
+
+            font-family: "JetBrains Mono", monospace;
+
+            font-size: 0.9rem;
+
+            margin-bottom: 1.5rem;
+
+            display: block;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            border-top: 1px solid var(--border);
+
+            padding: 2rem 0;
+
+            color: var(--muted);
+
+            font-size: 0.8rem;
+        }
+
+        .footer-inner {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 1rem;
+        }
+
+        .footer-socials {
+            display: flex;
+
+            gap: 0.8rem;
+        }
+
+        .footer-socials a {
+            color: var(--muted);
+
+            transition: 0.2s ease;
+        }
+
+        .footer-socials a:hover {
+            color: var(--accent-light);
+        }
+
+        /* =====================================================
+           REVEAL ANIMATION
+        ===================================================== */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(20px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .navbar-collapse {
+                padding: 1rem 0;
+            }
+
+            .nav-link {
+                padding: 0.55rem 0 !important;
+            }
+
+            .hero {
+                min-height: auto;
+
+                padding-top: 150px;
+                padding-bottom: 90px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-description {
+                font-size: 0.98rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .hero-actions a {
+                width: 100%;
+            }
+
+            .hero-socials {
+                margin-top: 0.5rem;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+            }
+
+            .contact-box {
+                padding: 2rem 1.3rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 2.55rem;
+            }
+
+            .project-card,
+            .skill-group,
+            .about-card,
+            .cert-card {
+                padding: 1.2rem;
+            }
+        }
+
+        /* =====================================================
+           REDUCED MOTION
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- ==========================================================
+     NAVBAR
+=========================================================== -->
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            Jashua<span class="brand-dot">.</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <i class="fa-solid fa-bars text-light"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#certifications">
+                        Certifications
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                    <a
+                        href="#contact"
+                        class="btn-main"
+                    >
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ==========================================================
+     HERO
+=========================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-9">
+
+                <div class="hero-label">
+
+                    <span class="status-dot"></span>
+
+                    COMPUTER SCIENCE ENGINEERING STUDENT
+
+                </div>
+
+                <h1>
+                    Hi, I'm Jashua.<br>
+                    I build <span>useful software.</span>
+                </h1>
+
+                <p class="hero-description">
+                    I'm a Computer Science Engineering student interested
+                    in software development, backend systems, web
+                    applications, and AI. I enjoy turning ideas into
+                    practical, user-focused projects.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#projects"
+                        class="btn-main"
+                    >
+                        <i class="fa-solid fa-code"></i>
+                        View Projects
+                    </a>
+
+                    <a
+                        href="resume.pdf"
+                        download
+                        class="btn-outline-main"
+                    >
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        Download Resume
+                    </a>
+
+                </div>
+
+                <div class="hero-socials">
+
+                    <a
+                        class="social-link"
+                        href="https://github.com/JashuaGummalla"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a
+                        class="social-link"
+                        href="https://www.linkedin.com/in/jashuagummalla/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a
+                        class="social-link"
+                        href="mailto:gummallajashua@gmail.com"
+                        aria-label="Email"
+                    >
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     ABOUT
+=========================================================== -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <div class="section-label">
+                01 / About
+            </div>
+
+            <h2 class="section-title">
+                A little about me
+            </h2>
+
+            <p class="section-description">
+                Focused on learning, building, and improving one project
+                at a time.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-7 reveal">
+
+                <p class="about-text">
+                    I'm currently pursuing my B.Tech in Computer Science
+                    Engineering. My interests span software development,
+                    web technologies, databases, and artificial
+                    intelligence.
+                </p>
+
+                <p class="about-text">
+                    I particularly enjoy building applications that solve
+                    practical problems. Through my projects, I have worked
+                    with technologies such as Python, Django, React,
+                    JavaScript, SQL, and modern web development tools.
+                </p>
+
+                <p class="about-text">
+                    Alongside development, I'm continuously strengthening
+                    my fundamentals in Data Structures and Algorithms,
+                    Database Management Systems, Operating Systems, and
+                    Computer Networks.
+                </p>
+
+            </div>
+
+            <div class="col-lg-5 reveal">
+
+                <div class="about-card">
+
+                    <h4>
+                        <i class="fa-solid fa-graduation-cap me-2"></i>
+                        Education
+                    </h4>
+
+                    <div class="education-item">
+
+                        <div class="education-title">
+                            B.Tech — Computer Science Engineering
+                        </div>
+
+                        <div class="education-meta">
+                            2nd Year
+                        </div>
+
+                    </div>
+
+                    <div class="education-item">
+
+                        <div class="education-title">
+                            Diploma — Computer Engineering
+                        </div>
+
+                        <div class="education-meta">
+                            Aditya Polytechnic College
+                            · 97.90% Aggregate
+                        </div>
+
+                    </div>
+
+                    <div class="education-item">
+
+                        <div class="education-title">
+                            AP ECET
+                        </div>
+
+                        <div class="education-meta">
+                            State Rank 115 · Branch Rank 103
+                        </div>
+
+                    </div>
+
+                    <div class="education-item">
+
+                        <div class="education-title">
+                            Class Representative
+                        </div>
+
+                        <div class="education-meta">
+                            Leadership & student coordination
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     SKILLS
+=========================================================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <div class="section-label">
+                02 / Skills
+            </div>
+
+            <h2 class="section-title">
+                Technical skills
+            </h2>
+
+            <p class="section-description">
+                Technologies and computer science fundamentals I'm
+                currently working with.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Languages -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="skill-group">
+
+                    <h3>
+                        <i class="fa-solid fa-terminal me-2"></i>
+                        Languages
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Web -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="skill-group">
+
+                    <h3>
+                        <i class="fa-solid fa-globe me-2"></i>
+                        Web & Backend
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">JavaScript ES6+</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">REST APIs</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CS -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="skill-group">
+
+                    <h3>
+                        <i class="fa-solid fa-microchip me-2"></i>
+                        Computer Science
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">DSA</span>
+                        <span class="skill-tag">DBMS</span>
+                        <span class="skill-tag">Operating Systems</span>
+                        <span class="skill-tag">Computer Networks</span>
+                        <span class="skill-tag">OOP</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tools -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="skill-group">
+
+                    <h3>
+                        <i class="fa-solid fa-wrench me-2"></i>
+                        Tools
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Power BI</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="skill-group">
+
+                    <h3>
+                        <i class="fa-solid fa-brain me-2"></i>
+                        AI & Productivity
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">AI-assisted Development</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mobile -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="skill-group">
+
+                    <h3>
+                        <i class="fa-solid fa-mobile-screen me-2"></i>
+                        Other
+                    </h3>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">Android Programming</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">UI Development</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     PROJECTS
+=========================================================== -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <div class="section-label">
+                03 / Projects
+            </div>
+
+            <h2 class="section-title">
+                Things I've built
+            </h2>
+
+            <p class="section-description">
+                Practical projects built while learning and experimenting
+                with different technologies.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+
+            <!-- Project 1 -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/JashuaGummalla/urban_services"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                aria-label="Live project"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Urban Services Web App
+                    </h3>
+
+                    <p>
+                        A responsive service-booking platform connecting
+                        customers with local service providers through
+                        a clean and practical interface.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span class="tech">Django</span>
+                        <span class="tech">Python</span>
+                        <span class="tech">HTML</span>
+                        <span class="tech">Bootstrap</span>
+
+                    </div>
+
+                    <a
+                        href="https://urban-services-web-app.onrender.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-demo"
+                    >
+                        View live project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <!-- Project 2 -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/JashuaGummalla/Milk_Collection_ERP_Bonus_Calculation"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                aria-label="Live project"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Milk Bonus & Payout Tracker
+                    </h3>
+
+                    <p>
+                        A web application designed to simplify milk bonus,
+                        payout and collection-related calculations.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+
+                    </div>
+
+                    <a
+                        href="https://erp-milk-bonus-calculation.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-demo"
+                    >
+                        View live project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <!-- Project 3 -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/JashuaGummalla/milkpro-management"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                aria-label="Live project"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Milk Center Management System
+                    </h3>
+
+                    <p>
+                        A management interface for organizing milk
+                        collection operations, farmer information and
+                        center activities.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+
+                    </div>
+
+                    <a
+                        href="https://milkcentermanagementsystem.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-demo"
+                    >
+                        View live project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <!-- Project 4 -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/JashuaGummalla/milkpro-management"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                aria-label="Live project"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Milk Collection Daily Workflow
+                    </h3>
+
+                    <p>
+                        A workflow-oriented application designed to
+                        organize daily milk collection center activities.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+
+                    </div>
+
+                    <a
+                        href="https://milkcollectioncenterdailyworkflow.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-demo"
+                    >
+                        View live project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <!-- Project 5 -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/JashuaGummalla/adityauniversity-idphoto"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                aria-label="Live project"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Aditya University ID Photo Generator
+                    </h3>
+
+                    <p>
+                        A simple browser-based tool for generating
+                        university-style ID photographs with a
+                        straightforward user interface.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+
+                    </div>
+
+                    <a
+                        href="https://adityauniversity-idphoto.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-demo"
+                    >
+                        View live project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <!-- Project 6 -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://github.com/JashuaGummalla/SMART-STUDENT-TO-DO-LIST"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                                aria-label="Live project"
+                            >
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Smart Student Academic To-Do
+                    </h3>
+
+                    <p>
+                        A responsive productivity tool designed to help
+                        students organize academic tasks and manage
+                        their daily workload.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+
+                    </div>
+
+                    <a
+                        href="https://smart-student-academic-to-do-list.netlify.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-demo"
+                    >
+                        View live project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     CERTIFICATIONS
+=========================================================== -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <div class="section-header reveal">
+
+            <div class="section-label">
+                04 / Certifications
+            </div>
+
+            <h2 class="section-title">
+                Certifications & learning
+            </h2>
+
+            <p class="section-description">
+                Courses and certifications that support my development
+                journey.
+            </p>
+
+        </div>
+
+        <div class="row g-3">
+
+
+            <!-- NVIDIA -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="cert-card">
+
+                    <div class="cert-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <div class="cert-content">
+
+                        <h3>
+                            NVIDIA AI for Beginners
+                        </h3>
+
+                        <p>
+                            NVIDIA Deep Learning Institute
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Agile -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="cert-card">
+
+                    <div class="cert-icon">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+
+                    <div class="cert-content">
+
+                        <h3>
+                            Agile Software Engineering
+                        </h3>
+
+                        <p>
+                            Coursera
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DBMS -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="cert-card">
+
+                    <div class="cert-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <div class="cert-content">
+
+                        <h3>
+                            Database Management Systems
+                        </h3>
+
+                        <p>
+                            Coursera
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Prompt Engineering -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="cert-card">
+
+                    <div class="cert-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <div class="cert-content">
+
+                        <h3>
+                            Prompt Engineering
+                        </h3>
+
+                        <p>
+                            Coursera
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Claude 101 -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="cert-card">
+
+                    <div class="cert-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+
+                    <div class="cert-content">
+
+                        <h3>
+                            Claude 101
+                        </h3>
+
+                        <p>
+                            Anthropic
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Claude Code -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="cert-card">
+
+                    <div class="cert-icon">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+
+                    <div class="cert-content">
+
+                        <h3>
+                            Claude Code
+                        </h3>
+
+                        <p>
+                            Anthropic
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Claude Platform 101 -->
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="cert-card">
+
+                    <div class="cert-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <div class="cert-content">
+
+                        <h3>
+                            Claude Platform 101
+                        </h3>
+
+                        <p>
+                            Anthropic
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     CONTACT
+=========================================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box reveal">
+
+            <div class="section-label">
+                05 / Contact
+            </div>
+
+            <h2>
+                Let's connect.
+            </h2>
+
+            <p>
+                I'm always interested in learning, collaborating on
+                projects, and connecting with people working in
+                technology.
+            </p>
+
+            <a
+                href="mailto:gummallajashua@gmail.com"
+                class="contact-email"
+            >
+                gummallajashua@gmail.com
+            </a>
+
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+
+                <a
+                    href="mailto:gummallajashua@gmail.com"
+                    class="btn-main"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                    Email Me
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/jashuagummalla/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline-main"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     FOOTER
+=========================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <div>
+                © 2026 Jashua Gummalla. All rights reserved.
+            </div>
+
+            <div class="footer-socials">
+
+                <a
+                    href="https://github.com/JashuaGummalla"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/jashuagummalla/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a
+                    href="mailto:gummallajashua@gmail.com"
+                    aria-label="Email"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ==========================================================
+     BOOTSTRAP JS
+=========================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>
+
+    /* =====================================================
+       SCROLL REVEAL
+    ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    const observer =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+    revealElements.forEach((element) => {
+
+        observer.observe(element);
+
+    });
+
+
+    /* =====================================================
+       ACTIVE NAVIGATION
+    ===================================================== */
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
+    const navLinks =
+        document.querySelectorAll(".nav-link");
+
+    const updateActiveNav = () => {
+
+        let currentSection = "";
+
+        sections.forEach((section) => {
+
+            const sectionTop =
+                section.offsetTop - 140;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionTop + sectionHeight
+            ) {
+
+                currentSection =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+        navLinks.forEach((link) => {
+
+            link.classList.remove("active");
+
+            if (
+                link.getAttribute("href") ===
+                "#" + currentSection
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    };
+
+    window.addEventListener(
+        "scroll",
+        updateActiveNav
+    );
+
+    updateActiveNav();
+
+
+    /* =====================================================
+       CLOSE MOBILE NAVBAR AFTER CLICK
+    ===================================================== */
+
+    const navLinksAll =
+        document.querySelectorAll(
+            ".navbar-nav .nav-link"
+        );
+
+    const navbarCollapse =
+        document.querySelector(
+            ".navbar-collapse"
+        );
+
+    navLinksAll.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            if (
+                navbarCollapse.classList.contains("show")
+            ) {
+
+                const bsCollapse =
+                    bootstrap.Collapse.getInstance(
+                        navbarCollapse
+                    );
+
+                if (bsCollapse) {
+
+                    bsCollapse.hide();
+
+                }
+
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       NAVBAR SHADOW ON SCROLL
+    ===================================================== */
+
+    const navbar =
+        document.getElementById(
+            "mainNavbar"
+        );
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            if (window.scrollY > 30) {
+
+                navbar.style.boxShadow =
+                    "0 10px 30px rgba(0,0,0,0.18)";
+
+            } else {
+
+                navbar.style.boxShadow =
+                    "none";
+
+            }
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
